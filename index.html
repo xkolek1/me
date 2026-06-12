@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matyáš Kolek</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <h1 id="name">Bc. Matyáš Kolek</h1>
+            <p class="subtitle">Student of Mathematical and Statistical Methods in Economics</p>
+        </div>
+
+        <div class="pdf-links">
+            <h2>Curriculum Vitae</h2>
+
+            <div class="cv">
+                <a href="https://drive.google.com/file/d/1xH3to-3-MHuOcGMvZC7CKy5cwhN-DIVI/view" target="_blank" rel="noopener noreferrer" class="cv-pdf">
+                    CV
+                </a>
+
+                <button class="toggle-arrow" id="toggle-arrow" aria-expanded="false" aria-controls="structured-cv">
+                    <svg id="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="structured-cv" class="structured-cv hidden" role="region" aria-labelledby="toggle-arrow">
+                <p><strong>Education:</strong></p>
+                <ul>
+                    <li>Masaryk University, Brno, CZE
+                        <ul>
+                            <li>Master's degree, Mathematical and Statistical Methods in Economics (since 2026)</li>
+                            <li>Bachelor’s degree, major in Economics, minor in Informatics (2023 - 2026)</li>
+                        </ul>
+                    </li>
+                    <li>University West, Trollhättan, SWE
+                        <ul>
+                            <li>Erasmus+ (2025, 5th term)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>Languages:</strong></p>
+                <ul>
+                    <li>Czech – Native</li>
+                    <li>English – C1 (CAE certificate)</li>
+                    <li>Spanish – B1/B2</li>
+                </ul>
+
+                <p><strong>Programming:</strong></p>
+                <ul>
+                    <li>Python, Java, R, Gretl, SQL, HTML + CSS, JavaScript, NetLogo, Bash</li>
+                </ul>
+            </div>
+
+            <h2>Courses</h2>
+            <a href="https://is.muni.cz/student/vystavene_znamky?lang=en;studium_osoby=1500651" target="_blank" rel="noopener noreferrer" class="button">
+                Transcript of Records Ing.
+            </a>
+
+            <a href="https://is.muni.cz/student/vystavene_znamky?lang=en;studium_osoby=1238505" target="_blank" rel="noopener noreferrer" class="button">
+                Transcript of Records Bc.
+            </a>
+
+            <h2>Projects</h2>
+            <p>Sales Analysis & CPQ System: CORROTECH OSTRAVA
+                (<a href="https://github.com/xkolek1/corrotech" target="_blank" rel="noopener noreferrer">Python</a>)
+            </p>
+
+            <p>Thesis: The Transmission of Energy Price Shocks to Inflation
+                (<a href="https://github.com/xkolek1/bc" target="_blank" rel="noopener noreferrer">R</a>)
+            </p>
+            <p>Software Engineering: OnePan.se project
+                (<a href="https://github.com/Nweder/smartpass_onepan" target="_blank" rel="noopener noreferrer">FE</a>)
+            </p>
+            <p>Web Dev:
+                <a href="https://xkolek1.github.io/ostravskypinec" target="_blank" rel="noopener noreferrer">OstravskyPinec.cz remake</a>
+                (<a href="https://github.com/xkolek1/ostravskypinec" target="_blank" rel="noopener noreferrer">aborted</a>)
+            </p>
+
+            <p>Time Series:
+                <a href="https://drive.google.com/file/d/1daWlH-8AX_FvaPAb87QJRUBSXs4CLEdd/view" target="_blank" rel="noopener noreferrer">
+                    The link between inflation and gas prices
+                </a>
+                (<a href="https://drive.google.com/file/d/1D2pQkOTCH0qfp5Re8ZRUrKGIH42hgaT6/view" target="_blank" rel="noopener noreferrer">R</a>)
+            </p>
+
+            <p>Modeling & Simulation:
+                <a href="https://drive.google.com/file/d/1kQXYwToaSq5ScNlVGR2UbmkRcCZ0aiZz/view" target="_blank" rel="noopener noreferrer">
+                    Intersection model analysis
+                </a>
+                (<a href="https://drive.google.com/file/d/1FHWJmzq3HmvyRzB3OF31tMVi9V2uZk88/view" target="_blank" rel="noopener noreferrer">nlogo</a>)
+            </p>
+
+            <p>Econometrics:
+                Factors affecting the price of draft beer (gretl)
+            </p>
+        </div>
+
+        <div class="contact-info">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:matyas.kolek@gmail.com">matyas.kolek@gmail.com</a></p>
+            <p>Phone: <a href="tel:+420721722325">+420 721 722 325</a></p>
+
+            <a href="https://www.linkedin.com/in/kolekm" target="_blank" rel="noopener noreferrer">
+                <span class="fa-brands fa-linkedin fa-2x"></span>
+            </a>
+
+            <a href="https://github.com/xkolek1" target="_blank" rel="noopener noreferrer">
+                <span class="fa-brands fa-github fa-2x"></span>
+            </a>
+        </div>
+    </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const arrowBtn = document.getElementById("toggle-arrow");
+        const cvContent = document.getElementById("structured-cv");
+
+        if (!arrowBtn || !cvContent) {
+            return;
+        }
+
+        arrowBtn.addEventListener("click", () => {
+            cvContent.classList.toggle("hidden");
+            const expanded = !cvContent.classList.contains("hidden");
+            arrowBtn.setAttribute("aria-expanded", expanded);
+        });
+    });
+</script>
+
+</body>
+</html>
